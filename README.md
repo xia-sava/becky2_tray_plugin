@@ -48,7 +48,7 @@ Becky! は呼び出し規約の装飾が付かない名前（`BKC_OnStart` な�
 
 ## メッセージの記録（trace-messages）
 
-Becky! が受け取るウィンドウメッセージを調べるための機能．既定のビルドには入らない．
+Becky! が受け取るウィンドウメッセージを調べるための機能．既定のビルドにはログを書くコードが入らないので，通常の利用ではログを取らない．使うときは，feature を指定して調査用の DLL をビルドする．
 
 ```sh
 cargo build --release --features trace-messages --target-dir target/trace
