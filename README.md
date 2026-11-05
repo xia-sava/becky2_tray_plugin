@@ -44,7 +44,7 @@ cargo build --release
 
 `target/i686-pc-windows-msvc/release/becky2_tray_plugin.dll` ができる．
 
-Becky! は呼び出し規約の装飾が付かない名前（`BKC_OnStart` など）で関数を探す．そのため，`build.rs` から `becky2_tray_plugin.def` をリンカに渡して，export 名を決めている．
+Becky! は呼び出し規約の装飾が付かない名前（`BKC_OnStart` など）で関数を探す．そのため，`build.rs` から `becky2_tray_plugin.def` をリンカに渡して，export する名前を指定している．
 
 ## メッセージの記録（trace-messages）
 
@@ -60,7 +60,7 @@ cargo build --release --features trace-messages --target-dir target/trace
 - それらのウィンドウが受け取った `WM_USER` 以上のメッセージ，`WM_SYSCOMMAND`，`WM_CLOSE`
 - `BKC_OnMenuInit` に渡されたメニューの項目
 
-マウスがタスクトレイアイコンの上を通るだけでも記録が増えるので，調べ終わったら既定のビルドに戻す．
+マウスをタスクトレイアイコンの上で動かすだけでもログが増えるので，調べ終わったら既定のビルドに戻す．
 
 ## ライセンス
 
