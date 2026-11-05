@@ -1,0 +1,4 @@
+EXPORTS
+BKC_OnStart
+BKC_OnMenuInit
+BKC_OnPlugInInfo

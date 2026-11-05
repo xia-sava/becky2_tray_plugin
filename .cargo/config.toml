@@ -1,0 +1,7 @@
+[build]
+# B2.exe is a 32-bit process, so the plugin DLL must be 32-bit as well.
+target = "i686-pc-windows-msvc"
+
+[target.i686-pc-windows-msvc]
+# Avoid a dependency on the VC++ runtime DLL in Becky!'s process.
+rustflags = ["-C", "target-feature=+crt-static"]

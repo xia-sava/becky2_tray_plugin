@@ -1,0 +1,17 @@
+[package]
+name = "becky2_tray_plugin"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+# Logs window messages received by the main window to a file next to the DLL.
+trace-messages = []
+
+[dependencies]
+windows-sys = { version = "0.61.2", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging", "Win32_UI_Shell", "Win32_System_LibraryLoader", "Win32_System_Threading"] }
+
+[profile.release]
+panic = "abort"
